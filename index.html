@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Own Component</title>
+    </head>
+
+    <body>
+        <p>I think I'm going to like React!</p>
+         <!-- Declares a container for UI.  Holds all elements returned. -->
+        <section id="mySection"></section> 
+
+        <!-- First 2 libraries (react and react-dom render React into a DOM) -->
+        <!-- Third library (babel-core) enables JSX and ES6 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+        <script type="text/babel">
+
+        // Create a component called, "MyComponent"
+            class MyComponent extends React.Component {
+
+        //  Every component has a render method  which returns HTML to render.
+                render(){
+                    return (
+
+                        <div>
+                            <h1>Declaritive!</h1>
+                                <p>React makes it painless to create interactive UIs. Design simple views
+                                 for each state in your application, and React will efficiently update and 
+                                 render just the right components when your data changes.  Declarative
+                                 views make your code more predictable and easier to debug.
+                                </p>
+                        </div>
+                    );
+                }
+            }
+           
+            ReactDOM.render(<MyComponent />, document.getElementById('mySection'));
+     </script>
+    </body>
+</html>
